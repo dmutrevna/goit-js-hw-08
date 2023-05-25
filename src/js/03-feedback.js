@@ -42,14 +42,13 @@ loadFormData();
 
 function onButtonSubmit(e) {
   e.preventDefault();
-
-  localStorage.removeItem(LOKAL_KEY);
-  form.reset();
-
   const formData = {
     email: email.value,
     message: textarea.value,
   };
+
+  localStorage.removeItem(LOKAL_KEY);
+  form.reset();
 
   console.log(formData);
 }
